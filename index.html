@@ -4,33 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nach Yomi Tracker</title>
-    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>Nach Yomi Tracker</h1>
-        </header>
-        <div class="card">
-            <h2>Current Chapter: <span id="current-chapter">Chapter 1</span></h2>
-            <div class="progress-bar">
-                <div class="progress" style="width: 30%;"></div>
-            </div>
-            <p>Progress: <span id="progress-percentage">30%</span></p>
-        </div>
-        <div class="official-chapters">
-            <h3>Official Chapters</h3>
-            <ul>
-                <li>Official Chapter 1</li>
-                <li>Official Chapter 2</li>
-            </ul>
-        </div>
-        <div class="current-chapters">
-            <h3>Current Chapters</h3>
-            <ul>
-                <li>Current Chapter: Chapter 1</li>
-            </ul>
-        </div>
-    </div>
+    <h1>Welcome to Nach Yomi Tracker</h1>
+    <p>Official Day Chapter: <span id="official-chapter"></span></p>
+    <p>Your Current Chapter: <span id="user-chapter"></span></p>
+
+    <script>
+        // Example code to dynamically set chapters
+        const officialChapter = "Chapter 15"; // This should be determined dynamically
+        const userChapter = "Chapter 8"; // This should be retrieved from user settings or inputs
+
+        document.getElementById('official-chapter').innerText = officialChapter;
+        document.getElementById('user-chapter').innerText = userChapter;
+    </script>
 </body>
 </html>
