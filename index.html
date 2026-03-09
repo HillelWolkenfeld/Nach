@@ -209,9 +209,14 @@ function save(){
 }
 
 function getCycleDay(){
- let today=new Date();
- let diff=today-cycleStartDate;
- return Math.floor(diff/(1000*60*60*24))+1;
+ let today = new Date();
+ today.setHours(0,0,0,0);
+
+ let start = new Date(cycleStartDate);
+ start.setHours(0,0,0,0);
+
+ let diff = today - start;
+ return Math.floor(diff / (1000*60*60*24)) + 1;
 }
 
 function makeLink(book,chapter){
